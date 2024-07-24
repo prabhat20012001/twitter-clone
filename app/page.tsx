@@ -1,5 +1,6 @@
 import {BsBell, BsBookmark, BsEnvelope, BsTwitter} from "react-icons/bs"
-import {BiHash, BiHomeCircle, BiUser} from "react-icons/bi"
+import {BiDollar, BiDotsHorizontal, BiDotsVertical, BiHash, BiHomeCircle, BiMoney, BiUser} from "react-icons/bi"
+import FeedCard from "@/components/FeedCard";
 export default function Home() {
   interface TwitterSidebarButton{
     title:string;
@@ -23,10 +24,18 @@ export default function Home() {
     },{
       title:"Bookmarks",
       icon:<BsBookmark/>
+    },
+    {
+      title:"Twitter Blue",
+      icon:<BiMoney/>
     }
     ,{
       title:"Profile",
       icon:<BiUser/>
+    },
+    {
+      title:"More",
+      icon:<BiDotsHorizontal/>
     }
   ]
   return (
@@ -51,7 +60,18 @@ export default function Home() {
         </div>
       </div> 
       </div>
-      <div className="col-span-6  border-x-[.2px]  border-slate-600 "></div>
+      <div className="col-span-6  border-x-[.2px]  border-slate-600 h-screen overflow-x-auto">
+        <FeedCard/>
+        <FeedCard/>
+        <FeedCard/>
+        <FeedCard/>
+        <FeedCard/>
+        <FeedCard/>
+        <FeedCard/>
+        <FeedCard/>
+        <FeedCard/>
+
+      </div>
       <div className="col-span-3 "></div>
     </div>
    </div>
